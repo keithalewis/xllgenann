@@ -18,82 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="xll\xll.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\oper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\XLCALL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\excel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\auto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\ensure.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\error.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\args.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\on.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\handle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\addin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\fp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\command.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\ref.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xll\registry.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="xll\XLCALL.CPP">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xll\debug.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xll\auto.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xll\error.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xll\oper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xll\dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Natvis Include="Visualizers\oper.natvis">
       <Filter>Visualizers</Filter>
     </Natvis>
@@ -104,8 +28,5 @@
   <ItemGroup>
     <None Include="xll12.bat" />
     <None Include="LICENSE.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="TODO.txt" />
   </ItemGroup>
 </Project>
