@@ -22,7 +22,7 @@
     <ProjectGuid>{99e1a582-a3f3-412d-ac3a-046dc09ee9b0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>xllgenann</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -185,14 +185,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Natvis Include="Visualizers\oper.natvis" />
-    <Natvis Include="Visualizers\oper12.natvis">
-      <SubType>Designer</SubType>
-    </Natvis>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="LICENSE.md" />
     <None Include="xll12.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xllgenann.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xllgenann.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
