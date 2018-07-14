@@ -1,6 +1,3 @@
-[submodule "genann"]
-	path = genann
-	url = https://github.com/codeplea/genann.git
 [submodule "xll12"]
 	path = xll12
 	url = https://github.com/keithalewis/xll12.git
