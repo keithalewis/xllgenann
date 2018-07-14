@@ -27,5 +27,8 @@
     <ClCompile Include="xllgenann.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="genann\genann.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

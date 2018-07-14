@@ -8,16 +8,18 @@ namespace xll {
     class genann {
         ::genann* p;
     public:
+        genann()
+        { }
         genann(int inputs, int hidden_layers, int hidden, int outputs)
-            : p(genann_init(inputs, hidden_layers, hidden, outputs))
+            : p(::genann_init(inputs, hidden_layers, hidden, outputs))
         { }
         genann(const genann&) = delete;
         genann& operator=(const genann&) = delete;
         ~genann()
         {
-            genann_free(p);
+            ::genann_free(p);
         }
-        operator ::genann*() const
+        operator const ::genann*() const
         {
             return p;
         }
