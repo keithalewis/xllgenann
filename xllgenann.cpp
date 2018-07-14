@@ -44,10 +44,8 @@ HANDLEX WINAPI xll_genann_train(HANDLEX h, _FP12* inputs, _FP12* outputs, double
     try {
         handle<xll::genann> h_(h);
         ensure(h_);
-        // ensure input and output size is correct
-        int inp;
-        inp = h_->inputs;
-        ensure(size(*inputs) == 1);// h_->inputs);
+        ensure(size(*inputs) == h_->ptr()->inputs);
+        ensure(size(*outputs) == h_->ptr()->outputs);
         genann_train(*h_, inputs->array, outputs->array, rate);
     }
     catch (const std::exception& ex) {
@@ -62,25 +60,30 @@ HANDLEX WINAPI xll_genann_train(HANDLEX h, _FP12* inputs, _FP12* outputs, double
 // genann_run
 
 AddIn xai_genann_run(
-    Function(XLL_HANDLE, L"?xll_genann_run", L"GENANN.RUN")
+    Function(XLL_FP, L"?xll_genann_run", L"GENANN.RUN")
     .Arg(XLL_HANDLE, L"handle", L"is a handle to a genann object.")
     .Arg(XLL_FP, L"inputs", L"is the number of inputs.")
     .FunctionHelp(L"run a genann object.")
 );
-HANDLEX WINAPI xll_genann_run(HANDLEX h, _FP12* inputs)
+_FP12* WINAPI xll_genann_run(HANDLEX h, _FP12* inputs)
 {
 #pragma XLLEXPORT
+    static xll::FP12 output;
+
     try {
         handle<xll::genann> h_(h);
         ensure(h_);
-        // ensure inputsize is correct
-        genann_run(*h_, inputs->array);
+        // ensure input size is correct
+        ensure(size(*inputs) == h_->ptr()->inputs);
+        size_t outputs = h_->ptr()->outputs;
+        output.resize(1, outputs);
+        memcpy(output.array(), genann_run(*h_, inputs->array), outputs * sizeof(double));
     }
     catch (const std::exception& ex) {
         XLL_ERROR(ex.what());
 
-        h = handlex{};
+        return 0;
     }
 
-    return h;
+    return output.get();
 }
